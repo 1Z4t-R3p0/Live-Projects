@@ -22,25 +22,25 @@ A hardened, high-interaction **Cowrie** honeypot integrated with an **Advanced A
 
 ---
 
-## 🛠️ Multi-Platform Setup
+## 🛠️ Automated Deployment
 
-Automate your environment setup on Windows and WSL by pulling the scripts directly from the repository.
+Automate the deployment of the SSH Honeypot and Analytics Dashboard onto Windows or Linux seamlessly. These scripts will automatically install **Docker**, clone the repository, and start the system via `docker-compose`.
 
 ### 🪟 Windows (PowerShell)
-Setup your Windows environment with Alacritty, Git, and Starship. Run this from a PowerShell Prompt:
+Run this command from an elevated PowerShell command prompt:
 ```powershell
 irm https://raw.githubusercontent.com/1Z4t-R3p0/Live-Projects/main/win-setup.ps1 | iex
 ```
 
-### 🐧 WSL (Ubuntu)
-Standardize your WSL terminal with Zsh, Oh-My-Zsh, and Neovim. Run this from your WSL prompt:
+### 🐧 WSL / Ubuntu
+Run this command from your terminal:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/1Z4t-R3p0/Live-Projects/main/wsl-setup.sh | bash
 ```
 
 ---
 
-## 🚀 Quick Start (Docker)
+## 🚀 Manual Quick Start (Docker)
 
 ### 1. Launch the System
 ```bash
