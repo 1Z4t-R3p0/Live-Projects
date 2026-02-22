@@ -1,0 +1,29 @@
+services:
+  cowrie:
+    image: cowrie/cowrie:latest
+    container_name: cowrie-honeypot
+    ports:
+      - "2222:2222"
+      - "2323:2323"
+    volumes:
+      - cowrie-logs:/cowrie/cowrie-git/var/log/cowrie
+    restart: always
+
+  dashboard:
+    build: ./dashboard
+    container_name: honeypot-dashboard
+    privileged: true
+    ports:
+      - "5001:5001"
+    environment:
+      - COWRIE_LOG_PATH=/cowrie/logs/cowrie.json
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - cowrie-logs:/cowrie/logs:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - cowrie
+    restart: always
+
+volumes:
+  cowrie-logs:
