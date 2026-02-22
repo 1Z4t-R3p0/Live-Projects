@@ -24,21 +24,18 @@ A hardened, high-interaction **Cowrie** honeypot integrated with an **Advanced A
 
 ## 🛠️ Multi-Platform Setup
 
-Automate your environment setup on Windows and WSL using the provided scripts.
+Automate your environment setup on Windows and WSL by pulling the scripts directly from the repository.
 
 ### 🪟 Windows (PowerShell)
-Setup your Windows environment with Alacritty, Git, and Starship.
+Setup your Windows environment with Alacritty, Git, and Starship. Run this from a PowerShell Prompt:
 ```powershell
-# Run the installer
-.\win-setup.ps1
+irm https://raw.githubusercontent.com/1Z4t-R3p0/Live-Projects/main/win-setup.ps1 | iex
 ```
 
 ### 🐧 WSL (Ubuntu)
-Standardize your WSL terminal with Zsh, Oh-My-Zsh, and Neovim.
+Standardize your WSL terminal with Zsh, Oh-My-Zsh, and Neovim. Run this from your WSL prompt:
 ```bash
-# Run the installer
-chmod +x wsl-setup.sh
-./wsl-setup.sh
+curl -fsSL https://raw.githubusercontent.com/1Z4t-R3p0/Live-Projects/main/wsl-setup.sh | bash
 ```
 
 ---
