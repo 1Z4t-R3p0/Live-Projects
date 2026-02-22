@@ -1,6 +1,6 @@
 # 🛡️ SSH Honeypot: Active Defense & Response
 
-![Architecture](https://github.com/1Z4t-R3p0/Live-Projects/raw/main/assets/architecture.svg)
+
 
 A hardened, high-interaction **Cowrie** honeypot integrated with an **Advanced Analytics Dashboard**. This system doesn't just watch threats—it actively neutralizes them through real-time risk scoring and automated session termination.
 
