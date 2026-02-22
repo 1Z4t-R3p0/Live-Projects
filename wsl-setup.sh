@@ -5,7 +5,7 @@ set -e
 #       WSL Ubuntu Setup Script
 # ====================================
 
-DOTFILES_REPO="https://github.com/SridharanThangaraji/dotfiles.git"
+DOTFILES_REPO="https://github.com/1Z4t-R3p0/Live-Projects.git"
 DOTFILES_DIR="$HOME/dotfiles"
 
 echo "===================================="
