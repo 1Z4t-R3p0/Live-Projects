@@ -29,6 +29,22 @@ This document breaks down the exact technologies, libraries, and architecture us
 
 The dashboard isn't just a passive log viewer; it possesses an active monitoring thread that fights back.
 
+### 🌊 System Flowchart
+
+```mermaid
+graph TD
+    A[Attacker] -->|SSH Port 2222| B(Cowrie Honeypot Container)
+    B -->|Logs Activity| C{cowrie.json}
+    C -->|Tails File| D[Flask Backend Daemon]
+    D -->|Executes| E{Calculate Risk Score}
+    E -->|> 100 Points| F[Flag IP as Critical]
+    F --> G[Write to Persistent blocks.json]
+    F --> H[Mount Docker Socket]
+    H -->|docker restart cowrie| B
+    E -->|< 100 Points| I[Render Analytics to Dashboard]
+    J[Live Dashboard] -->|Polls Backend via JS fetch| D
+```
+
 ### 1. Real-Time Risk Scoring
 Every action the attacker takes contributes to a dynamically calculated "Risk Score":
 *   Logging in successfully: +50 points
